@@ -37,3 +37,9 @@ canvas{
     border-color: rgb(0, 0, 0);
     box-shadow: 10px 10px 30px navy;
 }
+#image{
+    float: left;
+}
+#image1{
+    float: right;
+}
