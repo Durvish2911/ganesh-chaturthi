@@ -1,0 +1,39 @@
+#chandryaan_2_succesful{
+    background-color: #2a84fa;
+    box-shadow: deepskyblue;
+}
+#gunner{
+    color: red;
+    background-color: navy;
+    box-shadow: 10px 10px 30px black;
+}
+#as{
+   background-color: chocolate; 
+   border-color:rgb(58, 2, 2);
+   border-radius: 10px;
+   border-style: solid;
+   border-width: 10px;
+}
+#chandryaan_2_succesful:hover{
+    background-color: red;
+}
+#as:hover{
+background-color:#13daf0;
+}
+.copy_right_footer{
+    background-color: grey;
+    line-height: 7;
+    text-align: center;
+    margin-top:620px;
+    width: 100%;
+    color: black;
+    font-size: 15px;
+}
+canvas{
+    background-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 10px;
+    border-color: rgb(0, 0, 0);
+    box-shadow: 10px 10px 30px navy;
+}
