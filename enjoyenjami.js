@@ -19,3 +19,18 @@ function draw(){
 function as(){
     tts_sqaud.play();
 }
+var scoreright=0;
+var scoreleft=0;
+var leftwristx=0;
+var leftwristy=0;
+var rightwristx=0;
+var rightwristy=0;
+function gotposes(results){
+if(results.length>0){
+console.log(results);
+rightwristx=results[0].poses.rightWrist.x;
+rightwristy=results[0].poses.rightWrist.y;
+lefttwristx=results[0].poses.leftWrist.x;
+leftwristy=results[0].poses.rightWrist.y;
+}
+}

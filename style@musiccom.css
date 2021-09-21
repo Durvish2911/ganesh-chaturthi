@@ -24,10 +24,11 @@ background-color:#13daf0;
     background-color: grey;
     line-height: 7;
     text-align: center;
-    margin-top:620px;
+    bottom:0;
     width: 100%;
     color: black;
     font-size: 15px;
+    position:fixed;
 }
 canvas{
     background-color: black;
@@ -36,10 +37,4 @@ canvas{
     border-width: 10px;
     border-color: rgb(0, 0, 0);
     box-shadow: 10px 10px 30px navy;
-}
-#image{
-    float: left;
-}
-#image1{
-    float: right;
 }
