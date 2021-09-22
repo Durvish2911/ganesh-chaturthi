@@ -1,6 +1,6 @@
 var tts_sqaud="";
 function preload() {
-    durvish=loadSound("music.mp3.icloud")
+    durvish=loadSound("VentilatorMovieyareyaSong.mp3")
 }
 function setup() {
     canvas=createCanvas(550,550);
@@ -15,9 +15,21 @@ function optimus(){
 }
 function draw(){
     image(video,0,0,550,550);
+    if(scoreleft>0.2){
+       fill("blue")
+       stroke("red")
+       circle(leftwristx,leftwristy,40);
+       var y=Number(leftwristy);
+       var remove=floor(y);
+       var division=remove/500;
+       tts_sqaud.setVolume(division);
+       document.getElementById("image1").innerHTML=division;
+    }
 }
 function as(){
     tts_sqaud.play();
+    durvish.setVolume(1);
+    durvish.rate(1);
 }
 var scoreright=0;
 var scoreleft=0;
@@ -28,6 +40,7 @@ var rightwristy=0;
 function gotposes(results){
 if(results.length>0){
 console.log(results);
+scoreleft=results[0].pose.keypoints[9].score;
 rightwristx=results[0].poses.rightWrist.x;
 rightwristy=results[0].poses.rightWrist.y;
 lefttwristx=results[0].poses.leftWrist.x;
