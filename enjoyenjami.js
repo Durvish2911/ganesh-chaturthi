@@ -15,15 +15,21 @@ function optimus(){
 }
 function draw(){
     image(video,0,0,550,550);
+     var status=song1.isPLaying();
     if(scoreleft>0.2){
        fill("blue")
        stroke("red")
        circle(leftwristx,leftwristy,40);
-       var y=Number(leftwristy);
-       var remove=floor(y);
-       var division=remove/500;
-       tts_sqaud.setVolume(division);
-       document.getElementById("image1").innerHTML=division;
+       song2.stop();
+       if(status==false){
+           song1.play();
+       }
+       var status1=song2.isPLaying();
+       if(scoreright>0.2){}
+        song1.stop();
+        if(status1==false){
+            song2.play();
+        }
     }
 }
 function as(){
@@ -41,6 +47,7 @@ function gotposes(results){
 if(results.length>0){
 console.log(results);
 scoreleft=results[0].pose.keypoints[9].score;
+scoreright=results[0].pose.keypoints[10].score;
 rightwristx=results[0].poses.rightWrist.x;
 rightwristy=results[0].poses.rightWrist.y;
 lefttwristx=results[0].poses.leftWrist.x;
